@@ -1,128 +1,146 @@
-!DOCTYPE html
-html lang=tr
-head
-meta charset=UTF-8
-meta name=viewport content=width=device-width, initial-scale=1.0
-titleCEVDET ❤️ NEHİRtitle
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CEVDET ❤️ NEHİR</title>
 
-link href=httpsfonts.googleapis.comcss2family=Dancing+Scriptwght@700&display=swap rel=stylesheet
-
-style
- { margin0; padding0; box-sizingborder-box; }
-
-body {
-    height100vh;
-    displayflex;
-    justify-contentcenter;
-    align-itemscenter;
-    background radial-gradient(circle at top, #ff4d6d, #3a001f);
-    font-family'Dancing Script', cursive;
-    text-aligncenter;
-    colorwhite;
-    overflowhidden;
-    padding20px;
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
 }
 
-.container {
-    width100%;
-    max-width420px;
-    backgroundrgba(0,0,0,0.35);
-    backdrop-filterblur(10px);
-    padding35px 25px;
-    border-radius30px;
-    box-shadow0 0 50px rgba(255,0,102,0.6);
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff4b7d,#ff758c,#ff7eb3);
+overflow:hidden;
+color:white;
+text-align:center;
 }
 
-.names { font-size34px; margin-bottom15px; }
-h1 { font-size26px; margin-bottom25px; }
-
-button {
-    width100%;
-    padding18px;
-    font-size20px;
-    bordernone;
-    border-radius50px;
-    margin12px 0;
-    cursorpointer;
-    backgroundlinear-gradient(45deg,#ff99cc,#ff3366);
-    colorwhite;
-    font-weightbold;
+.container{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:25px;
+box-shadow:0 0 30px rgba(0,0,0,0.2);
+animation:fadeIn 2s ease;
+max-width:400px;
 }
 
-#message {
-    margin-top30px;
-    font-size24px;
-    displaynone;
+h1{
+font-size:28px;
+margin-bottom:20px;
+animation:glow 2s infinite alternate;
 }
 
-.heart {
-    positionabsolute;
-    color#ff99cc;
-    animationfloat 7s linear infinite;
+@keyframes glow{
+from{ text-shadow:0 0 5px #fff;}
+to{ text-shadow:0 0 20px #fff;}
 }
 
-@keyframes float {
-    0% { transformtranslateY(100vh); opacity1; }
-    100% { transformtranslateY(-10vh); opacity0; }
-}
-style
-head
-
-body
-
-div class=container
-    div class=namesCEVDET ❤️ NEHİRdiv
-    h1Beni Seviyor Musun Aşkım 💖h1
-
-    button onclick=startLove()Seni Seviyorum 💕button
-    button onclick=startLove()Seni Seviyorum 💘button
-
-    div id=message
-        SEVGİLİLER GÜNÜMÜZ KUTLU OLSUN AŞKIM ❤️✨
-    div
-div
-
-!-- YouTube Player --
-div id=player style=displaynone;div
-
-script src=httpswww.youtube.comiframe_apiscript
-
-script
-var player;
-
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-        height '0',
-        width '0',
-        videoId 'qJNSoCCk8GU',
-        playerVars {
-            'autoplay' 0,
-            'loop' 1,
-            'playlist' 'qJNSoCCk8GU'
-        }
-    });
+p{
+margin-bottom:25px;
+font-size:18px;
+line-height:1.5;
 }
 
-function startLove() {
-    document.getElementById(message).style.display = block;
-    if (player) {
-        player.playVideo();
-    }
+button{
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:white;
+color:#ff4b7d;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
 }
 
-function createHeart() {
-    const heart = document.createElement(div);
-    heart.classList.add(heart);
-    heart.innerHTML = ❤;
-    heart.style.left = Math.random()100 + vw;
-    heart.style.fontSize = Math.random()20 + 15 + px;
-    document.body.appendChild(heart);
-
-    setTimeout(() = heart.remove(), 7000);
+button:hover{
+transform:scale(1.1);
 }
 
-setInterval(createHeart, 500);
-script
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1; transform:translateY(0);}
+}
 
-body
-html
+#secret{
+display:none;
+margin-top:20px;
+animation:fadeIn 1.5s ease;
+}
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+}
+
+.heart{
+position:absolute;
+font-size:24px;
+animation:float 5s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(100vh);}
+to{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>CEVDET ❤️ NEHİR</h1>
+
+<p>
+Sen hayatıma girdiğin günden beri  
+kalbim sadece senin için atıyor... pat pat 💞
+</p>
+
+<button onclick="showSecret()">Bir Sürpriz Var 💌</button>
+
+<div id="secret">
+<p>
+Nehir...  
+Hayatımın en güzel tesadüfüsün.  
+Seninle her şey daha anlamlı, daha güzel.  
+Seni çok seviyorum 🤍
+</p>
+</div>
+</div>
+
+<div class="hearts" id="hearts"></div>
+
+<script>
+function showSecret(){
+document.getElementById("secret").style.display="block";
+}
+
+function createHeart(){
+const heart=document.createElement("div");
+heart.classList.add("heart");
+heart.innerHTML="❤️";
+heart.style.left=Math.random()*100+"vw";
+heart.style.fontSize=(Math.random()*20+15)+"px";
+heart.style.animationDuration=(Math.random()*3+3)+"s";
+document.getElementById("hearts").appendChild(heart);
+setTimeout(()=>heart.remove(),5000);
+}
+
+setInterval(createHeart,800);
+</script>
+
+</body>
+</html>
